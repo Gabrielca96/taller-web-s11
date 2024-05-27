@@ -2,6 +2,13 @@
 import Footer from './Footer.vue';
 import Verano from './Verano.vue';
 import Otono from './Otono.vue';
+import router from "../router";
+
+const handlerSearch = () => {
+  //emits('update:start', false);
+  router.push({ name: "Search" });
+};
+
 </script>
 
 
@@ -11,7 +18,7 @@ import Otono from './Otono.vue';
       <!-- buttons -->
       <div class="flex justify-between">
         <!-- back -->
-        <button>
+        <button @click="handlerSearch">
           <svg
             width="32"
             height="32"
